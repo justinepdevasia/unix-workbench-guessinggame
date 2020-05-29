@@ -1,14 +1,9 @@
-
 function congratulate {
 	echo "Congratulations!!! your guess is correct"
 }
-
 actual=$(ls -al | grep '^[-l]'| wc -l )
-
 read -p "Guess the number of files in the directory " guess
-
 num='^[0-9]+$'
-
 while true
 do
 	if ! [[ $guess =~ $num ]] 
@@ -25,8 +20,5 @@ do
 		congratulate
 		break
 	fi
-
 	read -p "Guess the number of files in the directory " guess
-
 done
-
